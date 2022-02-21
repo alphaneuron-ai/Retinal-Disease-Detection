@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="{{url_for('static', filename='css/main.css')}}" rel="stylesheet">      
+</head>
+<body style="background-color:powderblue;">
+
+<h2 align="middle"></h2>
+<form action="/predict" id="upload-file" method="post" enctype="multipart/form-data" align='middle'>
+    <label for="imageUpload" class="upload-label">
+        Choose...
+    </label>
+    <input type="file" name="file" id="imageUpload" accept=".image/png, image/jpg, image/jpeg">
+    <div id="display_image"></div>
+    <script src="{{url_for('static', filename='js/main.js')}}" type="text/javascript"></script>    
+    <br><br><br><br>
+
+    <button action= "{{url_for('upload')}}" name="Predict" value="Predict"> Check The Retinal Status </button>
+</form>
+</body>
+</html>
